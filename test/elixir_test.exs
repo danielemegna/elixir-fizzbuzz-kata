@@ -6,6 +6,6 @@ defmodule FizzBuzzTest do
   end
   
   test "multiples of 3 are fizz" do
-    assert FizzBuzz.work(3) == "Fizz"
+    assert FizzBuzz.work(9) == "Fizz"
   end
 end
