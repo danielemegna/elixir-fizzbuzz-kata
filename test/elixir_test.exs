@@ -1,7 +1,7 @@
-defmodule SumTest do
+defmodule FizzBuzzTest do
   use ExUnit.Case
 
-  test "sum works" do
-    assert Math.sum(1, 2) == 3
+  test "number to string" do
+    assert FizzBuzz.work(1) == "1"
   end
 end

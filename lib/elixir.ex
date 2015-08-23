@@ -1,5 +1,5 @@
-defmodule Math do
-  def sum a, b do
-    a + b
+defmodule FizzBuzz do
+  def work n do
+    to_string n 
   end
 end
