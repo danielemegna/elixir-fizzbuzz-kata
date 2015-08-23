@@ -1,4 +1,8 @@
 defmodule FizzBuzz do
+  def work(n) when rem(n, 3) == 0 and rem(n, 5) == 0 do
+    "FizzBuzz"
+  end
+
   def work(n) when rem(n, 3) == 0 do
     "Fizz"
   end
