@@ -8,4 +8,8 @@ defmodule FizzBuzzTest do
   test "multiples of 3 are fizz" do
     assert FizzBuzz.work(9) == "Fizz"
   end
+
+  test "multiples of 5 are buzz" do
+    assert FizzBuzz.work(10) == "Buzz"
+  end
 end
