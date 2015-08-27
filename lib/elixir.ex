@@ -16,7 +16,11 @@ defmodule FizzBuzz do
   defp work(n, [], ""), do: to_string(n)
   defp work(_, [], final_result), do: final_result
 
-  defp is_akin?(n, divisor) when rem(n, divisor) == 0, do: true
-  defp is_akin?(_, _), do: false
+  defp is_akin?(n, divisor) do
+    cond do
+      rem(n, divisor) == 0 -> true
+      true -> false
+    end
+  end
 
 end

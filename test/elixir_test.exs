@@ -33,6 +33,10 @@ defmodule FizzBuzzTest do
     assertFizzBuzz 105, "FizzBuzzBang"
   end
 
+  #test "new rule: if number contains divisor, then is akin with it" do
+    #assertFizzBuzz 31, "Fizz"
+  #end
+
   defp assertFizzBuzz n, expected do
     assert FizzBuzz.work(n) == expected
   end
