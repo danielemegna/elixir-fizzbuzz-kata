@@ -37,6 +37,14 @@ defmodule FizzBuzzTest do
     assertFizzBuzz 31, "Fizz"
   end
 
+  test "composed FizzBang with new rule" do
+    assertFizzBuzz 10327, "FizzBang"
+  end
+
+  test "composed FizzBuzzBang with new rule" do
+    assertFizzBuzz 25931947, "FizzBuzzBang"
+  end
+
   defp assertFizzBuzz n, expected do
     assert FizzBuzz.work(n) == expected
   end
