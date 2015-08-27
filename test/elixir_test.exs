@@ -21,6 +21,18 @@ defmodule FizzBuzzTest do
     assertFizzBuzz 14, "Bang"
   end
 
+  test "composed with 3 and 7 multiples" do
+    assertFizzBuzz 21, "FizzBang"
+  end
+  
+  test "composed with 5 and 7 multiples" do
+    assertFizzBuzz 70, "BuzzBang"
+  end
+
+  test "composed with 3, 5 and 7 multiples" do
+    assertFizzBuzz 105, "FizzBuzzBang"
+  end
+
   defp assertFizzBuzz n, expected do
     assert FizzBuzz.work(n) == expected
   end
