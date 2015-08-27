@@ -8,10 +8,8 @@ defmodule FizzBuzz do
   def work(n), do: work(n, @dictionary, "")
 
   defp work(n, [ {divisor, word} | tail ], result) do
-    case rem(n, divisor) do
-      0 -> work(n, tail, result <> word)
-      _ -> work(n, tail, result)
-    end
+    if rem(n, divisor) == 0, do: result = result <> word
+    work(n, tail, result)
   end
 
   defp work(n, [], ""), do: to_string(n)
