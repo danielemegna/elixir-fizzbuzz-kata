@@ -19,6 +19,7 @@ defmodule FizzBuzz do
   defp is_akin?(n, divisor) do
     cond do
       rem(n, divisor) == 0 -> true
+      String.contains?(to_string(n), to_string(divisor)) -> true
       true -> false
     end
   end
