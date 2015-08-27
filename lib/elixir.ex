@@ -1,17 +1,19 @@
 defmodule FizzBuzz do
-  def work(n) when rem(n, 3) == 0 and rem(n, 5) == 0 do
-    "FizzBuzz"
+
+  @dictionary [
+    {3, "Fizz"},
+    {5, "Buzz"},
+  ]
+
+  def work(n), do: work(n, @dictionary, "")
+
+  defp work(n, [ {divisor, word} | tail ], result) do
+    case rem(n, divisor) do
+      0 -> work(n, tail, result <> word)
+      _ -> work(n, tail, result)
+    end
   end
 
-  def work(n) when rem(n, 3) == 0 do
-    "Fizz"
-  end
-
-  def work(n) when rem(n, 5) == 0 do
-    "Buzz"
-  end
-
-  def work(n) when is_integer(n) do
-    to_string n 
-  end
+  defp work(n, [], ""), do: to_string(n)
+  defp work(_, [], result), do: result
 end
