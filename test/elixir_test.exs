@@ -17,6 +17,10 @@ defmodule FizzBuzzTest do
     assertFizzBuzz 15, "FizzBuzz"
   end
 
+  test "multiples of 7 are bang" do
+    assertFizzBuzz 14, "Bang"
+  end
+
   defp assertFizzBuzz n, expected do
     assert FizzBuzz.work(n) == expected
   end

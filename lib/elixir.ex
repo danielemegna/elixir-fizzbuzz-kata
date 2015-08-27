@@ -3,6 +3,7 @@ defmodule FizzBuzz do
   @dictionary [
     {3, "Fizz"},
     {5, "Buzz"},
+    {7, "Bang"},
   ]
 
   def work(n), do: work(n, @dictionary, "")
